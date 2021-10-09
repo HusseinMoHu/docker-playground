@@ -1,0 +1,40 @@
+$ docker run image-name --> create and running a container from an image
+$ docker run image-name [command] --> to override default command when trying to run container
+$ docker ps --> list all running containers
+$ docker ps --all --> show a list of all the containers we have ever created
+$ docker ps -a    --> show a list of all the containers we have ever created
+$ docker run = $ docker create + $ docker start
+$ docker create <image name> [COMMAND]             --> create a container
+$ docker start [OPTIONS] <container id | container name>     --> start a container
+$ docker start -a <container id | container name>     --> start a container and print the output in the terminal
+$ docker system prune --> Removing stopped containers
+$ docker logs <container id>  --> Retrieving log ouptput
+$ docker stop <container id> --> stop a container (shutdown on it's own time)
+$ docker kill <container id> --> kill a container (shutdown right now)
+
+$ docker exec -it <container id> <command> --> execute commands in  running container
+							 --> "exec" --> run another command
+ 							 --> "-it"  --> allow us to provide input to the container via terminal
+							 --> "-it"  --> shortcut for (terminal-input) allow us to input text via terminal
+							 
+$ docker exec -it <container id> sh    --> getting a command prompt in a container
+						   --> (get full terminal access inside the context of the container) which extremely powerful for debugging
+						 		(OR)
+$ docker exec -it <container id> bash  --> getting a command prompt in a container
+						   --> (get full terminal access inside the context of the container) which extremely powerful for debugging
+						 
+$ docker run -it <image name> sh  --> starting up a new container with a shell inside it
+
+$ docker rm <container id>  --> delete a container
+
+$ docker image ls --> list all images in your machine
+$ docker image rm <image id> --> delete an image
+
+$ docker build .                                       ---> build an image from Dockerfile
+$ docker build -t yourDockerId/imageName:version .     ---> Tagging an image @ build, the name is convention
+$ docker build -t husseinmohu/redis:latest .           ---> example of Tagging an image @ build
+$ docker build -t husseinmohu/mongodb:v2.0 .           ---> example of Tagging an image @ build
+
+$ docker run husseinmohu/mongodb                       ---> example: at run, you don't need to specifiy the version, by default it'll use :latest
+
+
