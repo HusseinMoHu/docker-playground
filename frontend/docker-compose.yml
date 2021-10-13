@@ -7,5 +7,5 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      # - /usr/src/app  # incase need to bookmark node_modules if not exist in local machine
+      # - /usr/src/app  # incase need to bookmark node_modules if it's not exist in local machine
       - .:/usr/src/app
