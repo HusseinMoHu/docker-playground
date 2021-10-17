@@ -15,4 +15,4 @@ services:
       dockerfile: Dockerfile.dev
     volumes:
       - .:/usr/src/app
-    command: ["npm", "run", "test"]
+    command: ["npm", "run", "test"] # to override CMD ["npm", start] in Dockerfile.dev
