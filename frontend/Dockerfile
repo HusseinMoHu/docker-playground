@@ -11,5 +11,5 @@ RUN npm run build
 # Second stage - take ONLY build directory from the previous stage
 # then command <start nginx> server which is the default command
 # so we don't need to write it
-FROM ngnix
+FROM nginx
 COPY --from=build-stage /app/build /usr/share/nginx/html
